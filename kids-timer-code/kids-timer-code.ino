@@ -1,9 +1,16 @@
-void setup() {
-  // put your setup code here, to run once:
+#include "SevSeg.h"
 
+SevSeg sevseg;
+
+void setup() {
+   byte numDigits = 2;
+   byte digitPins[] = {8, 7};
+   byte segmentPins[] = {5, 9, 10, 12, 11, 6, 4, 0};
+   sevseg.begin(COMMON_ANODE, numDigits, digitPins, segmentPins);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  sevseg.setNumber(31,0);
+  sevseg.refreshDisplay();
 }
+
