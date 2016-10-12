@@ -25,8 +25,8 @@ void setup() {
   Serial.begin(9600);
   
   byte numDigits = 2;
-  byte digitPins[] = {8, 7};
-  byte segmentPins[] = {5, 9, 10, 12, 11, 6, 4, 0};
+  byte digitPins[] = {8, 5};
+  byte segmentPins[] = {7, 9, 10, 12, 11, 6, 4, 0};
   sevseg.begin(COMMON_ANODE, numDigits, digitPins, segmentPins);
   pinMode(PIN_UP, INPUT_PULLUP);
   pinMode(PIN_DOWN, INPUT_PULLUP);
